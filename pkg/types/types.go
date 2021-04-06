@@ -21,6 +21,7 @@ type Payment struct {
 	ID int
 	Amount Money
 	Category Category
+	Status Status
 }
 //Card представляет информацию о платёжной карте
 type Card struct {
@@ -42,4 +43,10 @@ type PaymentSource struct{
 
 type Category string
 
+type Status string
 
+const (
+	StatusOk Status="OK"
+	StatusFail Status="FAIL"
+	StatusInProgress Status="INPROGRESS"
+)
